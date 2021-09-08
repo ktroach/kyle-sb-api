@@ -16,11 +16,13 @@ public class StuffController {
     @Autowired
     private StuffRepository stuffRepository;
 
+    @CrossOrigin
     @GetMapping("/stuff")
     public List<Stuff> getAllStuff() {
         return stuffRepository.findAll();
     }
 
+    @CrossOrigin
     @GetMapping("/stuff/{id}")
     public ResponseEntity<Stuff> getStuffById(@PathVariable(value = "id") Long stuffId)
             throws ResourceNotFoundException {
@@ -29,6 +31,7 @@ public class StuffController {
         return ResponseEntity.ok().body(stuff);
     }
 
+    @CrossOrigin
     @PostMapping("/stuff")
     public Stuff createStuff(@Valid @RequestBody Stuff stuff) {
         return stuffRepository.save(stuff);
