@@ -1,7 +1,7 @@
 package net.guides.springboot2.crud.model;
 
 import javax.persistence.*;
-import java.util.List;
+//import java.util.List;
 
 @Entity
 @Table(name = "employees")
@@ -20,8 +20,8 @@ public class Employee {
     @Column(name = "email_address", nullable = false)
     private String emailId;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "address")
-    private List<Address> addresses;
+//    @OneToMany(fetch = FetchType.LAZY, mappedBy = "address")
+//    private List<Address> addresses;
 
     public Employee() {
     }
