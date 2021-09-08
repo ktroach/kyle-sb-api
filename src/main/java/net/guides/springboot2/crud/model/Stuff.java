@@ -18,6 +18,9 @@ public class Stuff {
     @Column(name = "stuff_type", nullable = true)
     private String stuffType;
 
+    public Stuff() {
+    }
+
     public Stuff(String stuffName, String stuffDesc, String stuffType) {
         this.stuffName = stuffName;
         this.stuffDesc = stuffDesc;
