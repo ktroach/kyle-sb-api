@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.guides.springboot2.crud.exception.ResourceNotFoundException;
-import net.guides.springboot2.crud.model.Employee;
+import net.guides.springboot2.crud.dao.entity.Employee;
 import net.guides.springboot2.crud.repository.EmployeeRepository;
 
 @RestController

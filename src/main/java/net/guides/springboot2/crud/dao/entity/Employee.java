@@ -1,4 +1,4 @@
-package net.guides.springboot2.crud.model;
+package net.guides.springboot2.crud.dao.entity;
 
 import javax.persistence.*;
 //import java.util.List;

@@ -1,6 +1,8 @@
-package net.guides.springboot2.crud.model;
+package net.guides.springboot2.crud.dao.entity;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
+import java.util.Date;
 
 @Entity
 @Table(name = "home")
@@ -22,6 +24,7 @@ public class Home {
     @Column(name = "customer_name", nullable = true)
     private String customerName;
 
+    // status_code (NEW,INP,RTC,SLD)
     @Column(name = "status_code", nullable = true)
     private String statusCode;
 
@@ -87,6 +90,39 @@ public class Home {
 
     @Column(name = "longitude", nullable = true)
     private String longitude;
+
+    @Column(name = "estimated_cost", nullable = true )
+    private Double estimatedCost;
+
+    @Column(name = "actual_cost", nullable = true )
+    private Double actualCost;
+
+    @Column(name = "estimated_sale", nullable = true )
+    private Double estimatedSale;
+
+    @Column(name = "actual_sale", nullable = true )
+    private Double actualSale;
+
+    @Column(name = "date_of_sale", nullable = true )
+    private Date dateOfSale;
+
+    @Column(name = "date_of_contract", nullable = true )
+    private Date dateOfContract;
+
+    @Column(name = "date_of_completion", nullable = true )
+    private Date dateOfCompletion;
+
+    @Column(name = "date_created", nullable = true )
+    private Timestamp dateCreated;
+
+    @Column(name = "date_modified", nullable = true )
+    private Timestamp dateModified;
+
+    @Column(name = "created_by", nullable = true)
+    private String createdBy;
+
+    @Column(name = "modified_by", nullable = true)
+    private String modifiedBy;
 
     public String getBuilderName() {
         return builderName;
@@ -297,15 +333,91 @@ public class Home {
     }
 
 
-    // estimated_cost
-    // actual_cost
-    // estimated_selling_price
-    // actual_selling_price
-    // status_code (NEW,INP,RTC,SLD)
-    // date_of_sell
-    // date_of_contract
-    // date_of_completion
+    public Double getEstimatedCost() {
+        return estimatedCost;
+    }
 
+    public void setEstimatedCost(Double estimatedCost) {
+        this.estimatedCost = estimatedCost;
+    }
 
+    public Double getActualCost() {
+        return actualCost;
+    }
 
+    public void setActualCost(Double actualCost) {
+        this.actualCost = actualCost;
+    }
+
+    public Double getEstimatedSale() {
+        return estimatedSale;
+    }
+
+    public void setEstimatedSale(Double estimatedSale) {
+        this.estimatedSale = estimatedSale;
+    }
+
+    public Double getActualSale() {
+        return actualSale;
+    }
+
+    public void setActualSale(Double actualSale) {
+        this.actualSale = actualSale;
+    }
+
+    public Date getDateOfSale() {
+        return dateOfSale;
+    }
+
+    public void setDateOfSale(Date dateOfSale) {
+        this.dateOfSale = dateOfSale;
+    }
+
+    public Date getDateOfContract() {
+        return dateOfContract;
+    }
+
+    public void setDateOfContract(Date dateOfContract) {
+        this.dateOfContract = dateOfContract;
+    }
+
+    public Date getDateOfCompletion() {
+        return dateOfCompletion;
+    }
+
+    public void setDateOfCompletion(Date dateOfCompletion) {
+        this.dateOfCompletion = dateOfCompletion;
+    }
+
+    public Timestamp getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(Timestamp dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
+    public Timestamp getDateModified() {
+        return dateModified;
+    }
+
+    public void setDateModified(Timestamp dateModified) {
+        this.dateModified = dateModified;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public String getModifiedBy() {
+        return modifiedBy;
+    }
+
+    public void setModifiedBy(String modifiedBy) {
+        this.modifiedBy = modifiedBy;
+    }
 }

@@ -1,7 +1,7 @@
 package net.guides.springboot2.crud.controller;
 
 import net.guides.springboot2.crud.exception.ResourceNotFoundException;
-import net.guides.springboot2.crud.model.Stuff;
+import net.guides.springboot2.crud.dao.entity.Stuff;
 import net.guides.springboot2.crud.repository.StuffRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
