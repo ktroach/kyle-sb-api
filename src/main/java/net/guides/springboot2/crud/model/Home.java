@@ -88,6 +88,214 @@ public class Home {
     @Column(name = "longitude", nullable = true)
     private String longitude;
 
+    public String getBuilderName() {
+        return builderName;
+    }
+
+    public void setBuilderName(String builderName) {
+        this.builderName = builderName;
+    }
+
+    public String getProjectName() {
+        return projectName;
+    }
+
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
+    }
+
+    public String getPlanName() {
+        return planName;
+    }
+
+    public void setPlanName(String planName) {
+        this.planName = planName;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getStatusCode() {
+        return statusCode;
+    }
+
+    public void setStatusCode(String statusCode) {
+        this.statusCode = statusCode;
+    }
+
+    public Integer getBedrooms() {
+        return bedrooms;
+    }
+
+    public void setBedrooms(Integer bedrooms) {
+        this.bedrooms = bedrooms;
+    }
+
+    public Integer getFullBaths() {
+        return fullBaths;
+    }
+
+    public void setFullBaths(Integer fullBaths) {
+        this.fullBaths = fullBaths;
+    }
+
+    public Integer getHalfBaths() {
+        return halfBaths;
+    }
+
+    public void setHalfBaths(Integer halfBaths) {
+        this.halfBaths = halfBaths;
+    }
+
+    public Integer getStories() {
+        return stories;
+    }
+
+    public void setStories(Integer stories) {
+        this.stories = stories;
+    }
+
+    public Double getAreaWidth() {
+        return areaWidth;
+    }
+
+    public void setAreaWidth(Double areaWidth) {
+        this.areaWidth = areaWidth;
+    }
+
+    public Double getAreaDepth() {
+        return areaDepth;
+    }
+
+    public void setAreaDepth(Double areaDepth) {
+        this.areaDepth = areaDepth;
+    }
+
+    public Double getAreaSqFt() {
+        return areaSqFt;
+    }
+
+    public void setAreaSqFt(Double areaSqFt) {
+        this.areaSqFt = areaSqFt;
+    }
+
+    public Double getLiving1SqFt() {
+        return living1SqFt;
+    }
+
+    public void setLiving1SqFt(Double living1SqFt) {
+        this.living1SqFt = living1SqFt;
+    }
+
+    public Double getLiving2SqFt() {
+        return living2SqFt;
+    }
+
+    public void setLiving2SqFt(Double living2SqFt) {
+        this.living2SqFt = living2SqFt;
+    }
+
+    public String getStreetAddress() {
+        return streetAddress;
+    }
+
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
+    }
+
+    public String getCityName() {
+        return cityName;
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
+    }
+
+    public String getStateAbbr() {
+        return stateAbbr;
+    }
+
+    public void setStateAbbr(String stateAbbr) {
+        this.stateAbbr = stateAbbr;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public String getCommunity() {
+        return community;
+    }
+
+    public void setCommunity(String community) {
+        this.community = community;
+    }
+
+    public String getCountyName() {
+        return countyName;
+    }
+
+    public void setCountyName(String countyName) {
+        this.countyName = countyName;
+    }
+
+    public String getCountryName() {
+        return countryName;
+    }
+
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
+    }
+
+    public String getLotDesc() {
+        return lotDesc;
+    }
+
+    public void setLotDesc(String lotDesc) {
+        this.lotDesc = lotDesc;
+    }
+
+    public String getBlockNumber() {
+        return blockNumber;
+    }
+
+    public void setBlockNumber(String blockNumber) {
+        this.blockNumber = blockNumber;
+    }
+
+    public String getSectionNumber() {
+        return sectionNumber;
+    }
+
+    public void setSectionNumber(String sectionNumber) {
+        this.sectionNumber = sectionNumber;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
 
     // estimated_cost
     // actual_cost
