@@ -58,16 +58,16 @@ public class HomeController {
 //        final Home updatedHome = homeRepository.save(homeEntity);
 //        return ResponseEntity.ok(updatedHome);
 //    }
-//
-//    @DeleteMapping("/homes/{id}")
-//    public Map<String, Boolean> deleteHome(@PathVariable(value = "id") Long homeId)
-//            throws ResourceNotFoundException {
-//        Home homeEntity = homeRepository.findById(homeId)
-//                .orElseThrow(() -> new ResourceNotFoundException("Home not found for this id :: " + homeId));
-//        homeRepository.delete(homeEntity);
-//        Map<String, Boolean> response = new HashMap<>();
-//        response.put("deleted", Boolean.TRUE);
-//        return response;
-//    }
+
+    @DeleteMapping("/homes/{id}")
+    public Map<String, Boolean> deleteHome(@PathVariable(value = "id") Long homeId)
+            throws ResourceNotFoundException {
+        Home homeEntity = homeRepository.findById(homeId)
+                .orElseThrow(() -> new ResourceNotFoundException("Home not found for this id :: " + homeId));
+        homeRepository.delete(homeEntity);
+        Map<String, Boolean> response = new HashMap<>();
+        response.put("Home Deleted", Boolean.TRUE);
+        return response;
+    }
 
 }
