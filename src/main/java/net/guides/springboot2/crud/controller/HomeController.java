@@ -41,21 +41,45 @@ public class HomeController {
     }
 
     @CrossOrigin
-    @PutMapping
+    @PutMapping("/homes/{id}")
     public ResponseEntity<Home> updateHome(@PathVariable(value = "id") Long homeId,
                                            @Valid @RequestBody Home home)
         throws ResourceNotFoundException {
+
         Home homeEntity = homeRepository.findById(homeId)
                 .orElseThrow(() -> new ResourceNotFoundException("Home not found for this id :: " + homeId));
-//        homeEntity.setCustomerName(home.getCustomerName());
 
         // if you just pass in status_code will it update the database???
         // find out if @Valid only validates one or many property names
         homeEntity.setStatusCode(home.getStatusCode());
 
+        homeEntity.setBuilderName(home.getBuilderName());
+        homeEntity.setCustomerName(home.getCustomerName());
+        homeEntity.setProjectName(home.getProjectName());
+
+        // @TODO finish PUT method
+
+
         final Home updatedHome = homeRepository.save(homeEntity);
         return ResponseEntity.ok(updatedHome);
     }
+
+    @CrossOrigin
+    @PatchMapping("/homes/{id}")
+    public ResponseEntity<Home> updateStatus(@PathVariable(value = "id") Long homeId,
+            @Valid @RequestBody Home home)
+        throws ResourceNotFoundException {
+
+        Home homeEntity = homeRepository.findById(homeId)
+                .orElseThrow(() -> new ResourceNotFoundException("Home not found for this id :: " + homeId));
+
+        homeEntity.setStatusCode(home.getStatusCode());
+
+        final Home updatedHome = homeRepository.save(homeEntity);
+        return ResponseEntity.ok(updatedHome);
+    }
+
+
 
     @DeleteMapping("/homes/{id}")
     public Map<String, Boolean> deleteHome(@PathVariable(value = "id") Long homeId)
