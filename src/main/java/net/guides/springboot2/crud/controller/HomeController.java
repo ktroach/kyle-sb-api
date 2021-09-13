@@ -1,6 +1,5 @@
 package net.guides.springboot2.crud.controller;
 
-
 import net.guides.springboot2.crud.dao.entity.Home;
 import net.guides.springboot2.crud.exception.ResourceNotFoundException;
 import net.guides.springboot2.crud.repository.HomeRepository;
@@ -41,23 +40,22 @@ public class HomeController {
         return ResponseEntity.ok().body(homeEntity);
     }
 
-    // if you just pass in status_code will it update the database???
-    // find out if @Valid only validates one or many property names
-//    @CrossOrigin
-//    @GetMapping("/homes/{id}")
-//    public ResponseEntity<Home> updateHome(@PathVariable(value = "id") Long homeId, @Valid @RequestBody Home homeDetails) throws ResourceNotFoundException {
-//        Home homeEntity = homeRepository.findById(homeId)
-//                .orElseThrow(() -> new ResourceNotFoundException("Home not found for this id :: " + homeId));
-//
-//        homeEntity.setBuilderName(homeDetails.getBuilderName());
-//        homeEntity.setProjectName(homeDetails.getProjectName());
-//        homeEntity.setPlanName(homeDetails.getPlanName());
-//        homeEntity.setStatusCode(homeDetails.getStatusCode());
-//        homeEntity.setCustomerName(homeDetails.getCustomerName());
-//
-//        final Home updatedHome = homeRepository.save(homeEntity);
-//        return ResponseEntity.ok(updatedHome);
-//    }
+    @CrossOrigin
+    @PutMapping
+    public ResponseEntity<Home> updateHome(@PathVariable(value = "id") Long homeId,
+                                           @Valid @RequestBody Home home)
+        throws ResourceNotFoundException {
+        Home homeEntity = homeRepository.findById(homeId)
+                .orElseThrow(() -> new ResourceNotFoundException("Home not found for this id :: " + homeId));
+//        homeEntity.setCustomerName(home.getCustomerName());
+
+        // if you just pass in status_code will it update the database???
+        // find out if @Valid only validates one or many property names
+        homeEntity.setStatusCode(home.getStatusCode());
+
+        final Home updatedHome = homeRepository.save(homeEntity);
+        return ResponseEntity.ok(updatedHome);
+    }
 
     @DeleteMapping("/homes/{id}")
     public Map<String, Boolean> deleteHome(@PathVariable(value = "id") Long homeId)
