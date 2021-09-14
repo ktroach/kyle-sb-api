@@ -1,8 +1,8 @@
-package net.guides.springboot2.crud.controller;
+package main.java.net.guides.springboot2.crud.controller;
 
-import net.guides.springboot2.crud.dao.entity.Home;
-import net.guides.springboot2.crud.exception.ResourceNotFoundException;
-import net.guides.springboot2.crud.repository.HomeRepository;
+import main.java.net.guides.springboot2.crud.dao.entity.Home;
+import main.java.net.guides.springboot2.crud.exception.ResourceNotFoundException;
+import main.java.net.guides.springboot2.crud.repository.HomeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package net.guides.springboot2.crud.dao.entity;
+package main.java.net.guides.springboot2.crud.dao.entity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
