@@ -2,11 +2,16 @@ package main.java.net.guides.springboot2.crud.dao.entity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "home")
 public class Home {
+
+    @OneToMany(mappedBy = "stuff", cascade = CascadeType.ALL)
+    private List<Stuff> stuffs = new ArrayList<>();
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
