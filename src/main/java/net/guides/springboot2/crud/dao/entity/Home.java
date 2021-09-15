@@ -433,4 +433,12 @@ public class Home {
     public void setId(long id) {
         this.id = id;
     }
+
+    public List<Stuff> getStuffs() {
+        return stuffs;
+    }
+
+    public void setStuffs(List<Stuff> stuffs) {
+        this.stuffs = stuffs;
+    }
 }
