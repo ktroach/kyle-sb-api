@@ -10,9 +10,6 @@ import java.util.List;
 @Table(name = "home")
 public class Home {
 
-    @OneToMany(mappedBy = "stuff", cascade = CascadeType.ALL)
-    private List<Stuff> stuffs = new ArrayList<>();
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -434,11 +431,4 @@ public class Home {
         this.id = id;
     }
 
-    public List<Stuff> getStuffs() {
-        return stuffs;
-    }
-
-    public void setStuffs(List<Stuff> stuffs) {
-        this.stuffs = stuffs;
-    }
 }
