@@ -79,8 +79,6 @@ public class HomeController {
         return ResponseEntity.ok(updatedHome);
     }
 
-
-
     @DeleteMapping("/homes/{id}")
     public Map<String, Boolean> deleteHome(@PathVariable(value = "id") Long homeId)
             throws ResourceNotFoundException {
