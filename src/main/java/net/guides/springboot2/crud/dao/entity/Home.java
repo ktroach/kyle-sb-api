@@ -14,11 +14,14 @@ public class Home {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+
     @Column(name = "builder_name", nullable = true)
     private String builderName;
 
+
     @Column(name = "project_name", nullable = true)
     private String projectName;
+    
 
     @Column(name = "plan_name", nullable = true)
     private String planName;

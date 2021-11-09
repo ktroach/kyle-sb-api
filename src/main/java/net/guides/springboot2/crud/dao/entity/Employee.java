@@ -20,16 +20,20 @@ public class Employee {
     @Column(name = "email_address", nullable = false)
     private String emailId;
 
+    @Column(name = "phone_number", nullable = false)
+    private String phoneNumber;    
+
 //    @OneToMany(fetch = FetchType.LAZY, mappedBy = "address")
 //    private List<Address> addresses;
 
     public Employee() {
     }
 
-    public Employee(String firstName, String lastName, String emailId) {
+    public Employee(String firstName, String lastName, String emailId, String phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailId = emailId;
+        this.phoneNumber = phoneNumber;
     }
 
     public long getId() {
@@ -68,12 +72,22 @@ public class Employee {
     }
 
 
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }    
+
+
     @Override
     public String toString() {
         return "Employee [id=" + id
                 + ", firstName=" + firstName
                 + ", lastName=" + lastName
                 + ", emailId=" + emailId
+                + ", phoneNumber=" + phoneNumber
                 + "]";
     }
 
